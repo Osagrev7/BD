@@ -53,6 +53,7 @@ SELECT nombre, edad FROM clientes WHERE edad >= 18;
 SELECT nombre, ciudad, edad FROM clientes
 WHERE ciudad = 'Madrid' AND (edad < 18 OR edad > 65);
 ```
+
 | Tipo | Herramienta | Ejemplo |
 |---|---|---|
 | Simple | Comparación (`=`, `>`) | `edad = 18` |

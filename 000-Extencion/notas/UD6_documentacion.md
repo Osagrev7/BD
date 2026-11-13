@@ -39,6 +39,7 @@
 | M:N | Alumnos ↔ asignaturas (muchos a muchos) |
 
 **Participación** (obligatoria u opcional):
+
 | Tipo | ¿Obligatoria? | Ejemplo |
 |---|---|---|
 | Total | Sí | Todo pedido debe estar asociado a un cliente |
@@ -76,6 +77,7 @@ Se usa cuando el sistema es más complejo. Añade **jerarquías** (generalizaci�
 - Ejemplo: `Vehículo` (matrícula, marca, color, modelo) → `Coche`, `Moto`, `Furgoneta` con atributos propios.
 
 **Reglas de la jerarquía:**
+
 | Regla | Pregunta que responde | Valores |
 |---|---|---|
 | **Solapamiento** | ¿Un elemento puede pertenecer a varios subtipos a la vez? | Sí (ej. persona Profesor y Estudiante) / No |
@@ -194,9 +196,9 @@ CREATE TABLE ventas (
 - **Regla de negocio:** norma que hace que los datos tengan lógica en el mundo real.
 - Herramientas:
 
-| Herramienta | Qué hace | Ejemplo |
-|---|---|---|
-| **Constraint / `CHECK`** | Valida que el valor cumpla una condición | Precio > 0 |
+| Herramienta              | Qué hace                                                                                                       | Ejemplo                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **Constraint / `CHECK`** | Valida que el valor cumpla una condición                                                                       | Precio > 0                              |
 | **Trigger (disparador)** | Rutina automática ante INSERT/UPDATE/DELETE en una tabla; para reglas más complejas, auditorías o validaciones | Registrar quién cambió un dato y cuándo |
 
 ```sql

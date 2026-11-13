@@ -63,6 +63,7 @@ BEGIN
   RAISE NOTICE 'Total de clientes: %', v_total_clientes;
 END $$;
 ```
+
 | Parte del bloque | Función |
 |---|---|
 | Declaración de variables | Datos temporales que se usarán |

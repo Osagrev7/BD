@@ -519,10 +519,10 @@ Ejemplo: un empleado ve el nombre y el correo de los clientes, pero no sus contr
 - **Tablas base**: almacenan los datos físicos.
 - **Vistas**: muestran el resultado de una consulta sobre una o varias tablas. Simplifican el trabajo diario.
 
-| Característica | Tabla base | Vista |
-|---|---|---|
-| Almacenamiento | Guarda los datos en el disco | No guarda datos físicamente |
-| Propósito | Almacenar toda la información | Mostrar datos muy específicos |
+| Característica | Tabla base                    | Vista                         |
+| -------------- | ----------------------------- | ----------------------------- |
+| Almacenamiento | Guarda los datos en el disco  | No guarda datos físicamente   |
+| Propósito      | Almacenar toda la información | Mostrar datos muy específicos |
 
 > 💡 **Recuerda:** una vista nunca almacena datos por sí misma; funciona como un filtro sobre las tablas base.
 
@@ -530,11 +530,11 @@ Ejemplo: un empleado ve el nombre y el correo de los clientes, pero no sus contr
 
 Las vistas se crean con **DDL**. Simplifican las búsquedas, protegen datos confidenciales y muestran a cada usuario el resumen que necesita.
 
-| Comando | Acción |
-|---|---|
-| **CREATE VIEW** | Crear una vista nueva |
-| **ALTER VIEW** | Modificar una vista existente |
-| **DROP VIEW** | Borrar la vista del sistema |
+| Comando         | Acción                        |
+| --------------- | ----------------------------- |
+| **CREATE VIEW** | Crear una vista nueva         |
+| **ALTER VIEW**  | Modificar una vista existente |
+| **DROP VIEW**   | Borrar la vista del sistema   |
 
 **WITH CHECK OPTION** se añade al crear la vista. Comprueba que las modificaciones hechas a través de ella siguen cumpliendo la condición definida. Si el dato no pasa la revisión, no se guarda.
 
@@ -622,11 +622,11 @@ Ventajas:
 
 > 💡 **Recuerda:** agrupar autorizaciones en roles evita fallos de seguridad y simplifica el mantenimiento.
 
-| Característica | Asignación individual | Asignación por roles |
-|---|---|---|
-| Tiempo invertido | Elevado | Reducido |
-| Riesgo de errores | Mayor | Menor |
-| Ante cambios | Requiere más ajustes | Se centraliza en el rol |
+| Característica    | Asignación individual | Asignación por roles    |
+| ----------------- | --------------------- | ----------------------- |
+| Tiempo invertido  | Elevado               | Reducido                |
+| Riesgo de errores | Mayor                 | Menor                   |
+| Ante cambios      | Requiere más ajustes  | Se centraliza en el rol |
 
 ---
 
@@ -708,11 +708,11 @@ Las **restricciones** son reglas sobre columnas o tablas que limitan los valores
 
 Si la tabla ya tiene datos, el SGBD comprueba que cumplen la nueva regla y puede rechazarla. Por eso conviene revisar los datos antes.
 
-| Acción | Función | Ejemplo |
-|---|---|---|
-| **Añadir** | Crear una obligación | Exigir mayoría de edad |
-| **Modificar** | Cambiar una norma | Ajustar el código postal |
-| **Eliminar** | Quitar una regla | Hacer un campo opcional |
+| Acción        | Función              | Ejemplo                  |
+| ------------- | -------------------- | ------------------------ |
+| **Añadir**    | Crear una obligación | Exigir mayoría de edad   |
+| **Modificar** | Cambiar una norma    | Ajustar el código postal |
+| **Eliminar**  | Quitar una regla     | Hacer un campo opcional  |
 
 ---
 
@@ -742,10 +742,10 @@ GRANT SELECT, INSERT ON cliente TO usuario_lectura;
 
 GRANT también sirve para otros objetos, como vistas o índices, con la misma sintaxis.
 
-| Lenguaje | Función | Ejemplo |
-|---|---|---|
-| **DDL** | Construir la estructura | Crear una tabla |
-| **DCL** | Controlar el acceso | Otorgar un acceso |
+| Lenguaje | Función                 | Ejemplo           |
+| -------- | ----------------------- | ----------------- |
+| **DDL**  | Construir la estructura | Crear una tabla   |
+| **DCL**  | Controlar el acceso     | Otorgar un acceso |
 
 **WITH GRANT OPTION** se añade al final para que el usuario pueda compartir sus permisos. Le da mucha responsabilidad, así que requiere control.
 
@@ -771,10 +771,10 @@ REVOKE SELECT ON cliente FROM usuario_lectura RESTRICT;
 REVOKE SELECT ON cliente FROM usuario_lectura CASCADE;
 ```
 
-| Opción | Comportamiento |
-|---|---|
+| Opción       | Comportamiento                                           |
+| ------------ | -------------------------------------------------------- |
 | **RESTRICT** | Frena la acción si el permiso se ha compartido con otros |
-| **CASCADE** | Quita el acceso al usuario y a todos los conectados a él |
+| **CASCADE**  | Quita el acceso al usuario y a todos los conectados a él |
 
 ## 12.3. Auditoría y trazabilidad: registros de actividad y buenas prácticas
 

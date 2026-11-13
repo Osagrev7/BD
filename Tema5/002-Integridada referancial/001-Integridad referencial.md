@@ -22,8 +22,20 @@ CREATE TABLE pedidos (
 );
 ```
 
-La tabla pedidos solo puede registrar pedidos asociados a `clientes` existentes. Si se inserta un `pedidos` con un `id_cliente` que no existe en la tabla clientes, la base de datos rechaza la operaciion.
+La tabla pedidos solo puede registrar pedidos asociados a `clientes` existentes. Si se inserta un `pedidos` con un `id_cliente` que no existe en la tabla clientes, la base de datos rechaza la operación.
 
 Añadir, modificar o eliminar datos afecta directamente a estas relaciones, hay que comprobar si otros datos dependen de ella.
 
-Si una operacion incumple estas reglas, el SGBD detiene la operacion para proteger la coherecia de la imformacion. 
+Si una operación incumple estas reglas, el SGBD detiene la operación para proteger la coherencia de la información. 
+
+# Vocabulario 
+
+|Término|Significado|Ejemplo|
+|---|---|---|
+|Tabla padre / principal|Contiene el registro de referencia|clientes|
+|Tabla hija / dependiente|Registros que dependen del padre|pedidos|
+|Clave primaria|Identifica el registro principal|id_cliente|
+|Clave foránea|Enlaza hijo con padre|pedidos.id_cliente|
+
+>La integridad referencial evita modificar o borrar datos si eso deja
+>información incompleta.

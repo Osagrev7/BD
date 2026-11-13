@@ -2,7 +2,7 @@
 
 Usar tipos de datos adecuados aporta varias ventajas, La information es coherente y hay menos errores. Se ocupa menos espacio, así que las consultas, ordenación y filtros son mas rápidos. 
 
-# 3.1 Tips de datos numéricos 
+# 3.1 Tipos de datos numéricos 
 
 Las tablas de datos se conectan mediante claves de identification que suelen usar numerous para identificar y relacionar registros. 
 
